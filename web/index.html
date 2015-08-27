@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="worshipLink">
+
+<head>
+    <link rel="stylesheet" href="/icons/foundation-icons.css">
+    <link rel="stylesheet" href="/styles/generated/app.css">
+</head>
+
+<body>
+    <div ng-include="'/views/partials/_header.html'" ng-controller="HeaderController">
+    </div>
+
+
+    <div class="container">
+        <div class="page-container">
+            <div class="page-side-bar left">
+                <div ng-include="'/views/partials/_sidebar.html'" ng-controller="SideBarController"></div>
+            </div>
+
+            <div class="page-content-wrapper">
+                <div class="page-content">
+                    <div class="content-view" ui-view>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/generated/bundle.js"></script>
+</body>
+
+</html>

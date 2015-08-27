@@ -1,0 +1,8 @@
+<ul class="menu-side-nav">
+   
+   <li ng-repeat="item in items" ng-class="{active: item.selected}">
+        <div class="indicator" ng-show="{{item.selected}}"></div>
+        <a ui-sref="{{item.state}}"><i class="{{item.icon}} large"></i> {{item.text}}</a>
+   </li>
+
+</ul>

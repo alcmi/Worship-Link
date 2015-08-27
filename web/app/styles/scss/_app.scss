@@ -1,0 +1,99 @@
+@import "settings";
+body {
+    width: 100%;
+    margin: 0;
+    background-color: $body-color;
+    font-family: "Open Sans", Roboto !important;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.page-container {
+    margin-top: 70px !important;
+    max-width: inherit !important;
+    .columns {
+        padding: 0 !important;
+    }
+    > div:nth-child(2) {
+        @include add-shadow(); 
+    }
+}
+
+.page-logo,
+.page-side-bar {
+    width: 140px;
+}
+
+.page-side-bar {
+    margin-right: -20%;
+    position: fixed;
+}
+
+$content-min-height: 400px;
+.page-content-wrapper {
+    width: 100%;
+    .search-container {
+        padding: 10px;
+    }
+    .search-input input {
+        background-color: $dark-accent;
+        border: none;
+        box-shadow: none;
+    }
+    .search-icon {
+        font-size: 25px;
+    }
+    .page-content {
+        padding-left: 140px;
+        //Main content view
+        .content-view[ui-view] {
+            min-height: $content-min-height;
+            background-color: $content-color;
+            position: relative;
+            .dashboard-container {
+                padding: 10px;
+            }
+            .list-people-container {
+                background-color: $dark-accent;
+                overflow-y: scroll;
+                max-height: 500px;
+                color: white !important;
+                >.row {
+                    background-color: $dark-accent;
+                }
+            }
+            .person-profile {
+                .profile-info {
+                    margin: 10px 20px;
+                    background-color: white;
+                }
+            }
+            .img-contact {
+                border: 1px solid $blue-accent;
+                border-radius: 200px;
+                //                    margin-left: 10px;
+            }
+            .row {
+                margin-left: 0;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.page-logo {
+    background-color: $logo-color;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(/fonts/Roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url(/fonts/Open_Sans/OpenSans-Light.ttf);
+}

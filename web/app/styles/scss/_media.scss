@@ -1,0 +1,15 @@
+@import "../../bower_components/foundation/scss/foundation/components/global";
+
+@media #{$large-up}
+{
+    .page-content, .container {
+        width: $medium-breakpoint;
+    }
+}
+
+@media #{$medium-only}
+{
+    .page-content, .container {
+        width: $small-breakpoint;
+    }
+} 
