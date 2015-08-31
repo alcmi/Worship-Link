@@ -8,11 +8,38 @@
 <div class="row">
     <div class="large-5 columns">
         <div class="panel profile-info">
-          <div class="pofile-pic">
-              <img ng-src="/images/{{item.image}}" class="img-contact"/>
-          </div>
-           
-            {{ item.name }}
+            <div class="profile-pic">
+                <img ng-src="/images/{{item.image}}" class="img-contact" />
+            </div>
+            <div class="profile-usertitle">
+                <div class="profile-usertitle-name">
+                    {{ item.name }}
+                </div>
+                <div class="profile-usertitle-title">
+                    {{ item.title }}
+                </div>
+            </div>
+            <div class="profile-userbuttons">
+                <a href="#" class="button round success tiny">
+                   Follow
+               </a>
+                <a href="#" class="button round alert tiny">
+                   Message
+               </a>
+
+            </div>
+            <div class="profile-useractions">
+                <ul class="side-nav">
+                    <li><a href="#"><i class="fi-social-stack-overflow"></i> Overview</a>
+                    </li>
+                    <li><a href="#"><i class="fi-social-delicious"></i> Activities</a>
+                    </li>
+                    <li><a href="#"><i class="fi-list"></i> Tasks</a>
+                    </li>
+                    <li><a href="#"><i class="fi-wrench"></i> Help</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     <div class="large-7 columns">

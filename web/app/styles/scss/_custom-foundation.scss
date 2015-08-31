@@ -11,6 +11,17 @@ $topbar-height: rem-calc(60);
 .top-bar {
     @include add-shadow();
 }
+@mixin set-active() {
+  &.active {
+            background-color: $darker-accent;
+            a {
+                color: white;    
+            }
+            i {
+                color: white;    
+            }
+        }      
+}
 
 //$include-html-nav-classes: $include-html-classes;
 //$side-nav-list-type: none;
@@ -53,23 +64,23 @@ $side-nav-link-padding: 10px 20px;
             margin-right: 5px;
             color: $green-accent;
         }
-        &.active {
-            background-color: $dark-accent;
-            a {
-                color: white;    
-            }
-            i {
-                color: $red-accent;    
-            }
-        }
+        @include set-active();
+        
         &:hover {
             background-color: $dark-accent;
         }
     }
-    &.list-people li:hover {
-        background-color: $darker-accent;
+    &.list-people li {
+        &:hover {
+            background-color: $darker-accent;
+        }
+        &:focus {
+            background-color: $darker-accent; 
+        }
     }
 }
+
+
 
 $panel-bg: $white;
 $panel-border-style: none;

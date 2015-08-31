@@ -2,7 +2,7 @@
 $body-color: #FFF;
 $menu-color: #FFF;
 $side-nav-color: #494A4E;
-$content-color: #F1F3FA; 
+$content-color: #F1F3FA;
 //$logo-color: #28A6EC;
 $logo-color: #FFF;
 $dark-accent: #393A3E;
@@ -10,7 +10,17 @@ $darker-accent: #2E2E31;
 $blue-accent: #008CBA;
 $green-accent: #01b070;
 $red-accent: #FB5557;
+$blue-darker-accent: #5A7391;
+$profile-link-hover: #F6F9FB;
 
 @mixin add-shadow() {
     box-shadow: 0px 0px 20px 0px rgba(50, 50, 50, 0.2)
+}
+
+@mixin center-element($include-margin) {
+    text-align: center;
+    margin: 0 auto;
+    @if $include-margin {
+        margin-bottom: 20px;
+    }
 }

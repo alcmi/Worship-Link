@@ -13,19 +13,23 @@
             <div class="row">
                 <div class="large-12 columns">
                     <ul class="menu-side-nav list-people">
-                        <li ng-repeat="item in people | orderBy: 'name' | filter:query">
+                        <li ng-repeat="item in people | orderBy: 'name' | filter:query" 
+                            ng-click="select($index)" 
+                            ng-class="{active: $index == selected}">
                             <a ui-sref=".profile({ profile : item })">
                                 <div class="row">
-                                    <div class="large-3 columns">
+                                    <div class="large-2 columns">
                                         <img ng-src="/images/{{item.image}}" class="img-contact" />
                                     </div>
-                                    <div class="large-7 columns">
+                                    <div class="large-9 columns">
                                         <div class="name">
                                             {{ item.name }}
                                         </div>
+<!--
                                         <div>
                                             {{ item.location }}
                                         </div>
+-->
                                         <div>
                                             {{ item.contactNumber }}
                                         </div>

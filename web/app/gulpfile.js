@@ -24,7 +24,7 @@ gulp.task('concat', function () {
 
 gulp.task('watch', function () {
     gulp.watch('styles/scss/*.scss', ['sass']);
-    gulp.watch(['app.js', 'controllers/*.js'], ['concat']);
+    gulp.watch(['app.js', 'js/controllers/*.js'], ['concat']);
 });
 
 gulp.task('default', function () {
