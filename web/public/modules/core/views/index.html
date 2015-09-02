@@ -3,18 +3,18 @@
 
 <head>
     <link rel="stylesheet" href="/icons/foundation-icons.css">
-    <link rel="stylesheet" href="/styles/generated/app.css">
+    <link rel="stylesheet" href="/assets/styles/app.css">
 </head>
 
 <body>
-    <div ng-include="'/views/partials/_header.html'" ng-controller="HeaderController">
+    <div ng-include="'/modules/core/views/partials/_header.html'" ng-controller="HeaderController">
     </div>
 
 
     <div class="container">
         <div class="page-container">
             <div class="page-side-bar left">
-                <div ng-include="'/views/partials/_sidebar.html'" ng-controller="SideBarController"></div>
+                <div ng-include="'/modules/core/views/partials/_sidebar.html'" ng-controller="SideBarController"></div>
             </div>
 
             <div class="page-content-wrapper">
@@ -27,7 +27,7 @@
         </div>
     </div>
 
-    <script src="/js/generated/bundle.js"></script>
+    <script src="/assets/js/bundle.js"></script>
 </body>
 
 </html>

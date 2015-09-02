@@ -9,7 +9,7 @@ angular.module('peopleCtrl', [])
             location: 'Australia',
             contactNumber: '+61 433 312 882',
             title: 'Software Developer',
-            image: 'profile.png'
+            image: 'jowel.png'
         },
         {
             name: 'Jayson Delos Santos',

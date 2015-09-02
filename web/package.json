@@ -7,10 +7,15 @@
     "body-parser": "^1.13.3",
     "express": "^4.13.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-concat": "^2.6.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "postinstall": "bower install --config.interactive=false"
   },
   "author": "",
   "license": "ISC"

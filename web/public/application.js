@@ -1,13 +1,12 @@
 angular.module('worshipLink', 
-               ['mm.foundation', 
+				['mm.foundation', 
                 'ui.router', 
                 'ngAnimate',
-                'headerCtrl', 
-                'sideBarCtrl', 
-                'peopleCtrl',
-                'planCtrl',
-                'mediaCtrl',
-                'profileCtrl'])
+                'dashboard',
+                'core', 
+                'people',
+                'plan',
+                'media'])
 
 .config(function ($stateProvider, $urlRouterProvider) {
 
@@ -16,27 +15,27 @@ angular.module('worshipLink',
     $stateProvider
         .state('dashboard', {
             url: '/dashboard',
-            templateUrl: '/views/dashboard.html'
+            templateUrl: '/modules/dashboard/views/dashboard.html'
         })
         .state('people', {
             url: '/people',
-            templateUrl: '/views/people.html',
+            templateUrl: '/modules/people/views/people.html',
             controller: 'PeopleController'
         })
         .state('people.profile', {
             url: 'profile',
-            templateUrl: '/views/people-profile.html',
+            templateUrl: '/modules/people/views/people-profile.html',
             controller: 'ProfileController',
             params: { profile : null }
         })
         .state('plan', {
             url: '/plan',
-            templateUrl: '/views/plan.html',
+            templateUrl: '/modules/plan/views/plan.html',
             controller: 'PlanController'
         })
         .state('media', {
             url: '/media',
-            templateUrl: '/views/media.html',
+            templateUrl: '/modules/media/views/media.html',
             controller: 'MediaController'
         })
         .state('about', {

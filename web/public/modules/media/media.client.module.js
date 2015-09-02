@@ -1,0 +1,2 @@
+angular.module('media',
+				['mediaCtrl']);
